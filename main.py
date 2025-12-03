@@ -91,7 +91,7 @@ def view_patient():
     return data
 
 @app.get("/patient/{patient_id}")
-def view_patient(patient_id: str = Path(..., description="ID of the patient in DB", example='P001')):
+def view_specific_patient(patient_id: str = Path(..., description="ID of the patient in DB", example='P001')):
 
     data = load_file()
 
